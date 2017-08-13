@@ -28,7 +28,7 @@ class MyHtmlParser(HTMLParser):
 
 
 parser = MyHtmlParser()
-with closing(urlopen('https://www.python.org/events/python-events/')) as page:
+with closing(urlopen('https://blog.yvanwang.com')) as page:
     for line in page:
         lineParser = parser.feed(line.decode('utf-8'))
         print(lineParser if lineParser is not None else '')

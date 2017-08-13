@@ -13,7 +13,7 @@ def login_form():
     return render_template('form.html')
 
 
-@app.route('login', methods=['POST'])
+@app.route('/login', methods=['POST'])
 def login():
     form = request.form
     username = form['username']
